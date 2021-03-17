@@ -4,6 +4,7 @@
 trained_models
 tensorboard/*
 tensorboard
+models
 # PyPI
 build/*
 dist/*
