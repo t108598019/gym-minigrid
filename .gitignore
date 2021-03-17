@@ -2,7 +2,8 @@
 *__pycache__
 *egg-info
 trained_models
-
+tensorboard/*
+tensorboard
 # PyPI
 build/*
 dist/*
