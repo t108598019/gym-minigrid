@@ -16,5 +16,5 @@ if not os.path.isdir(model_folder):
 env = gym.make('MiniGrid-FourRooms-v0')
 env = FlatObsWrapper(env)
 model = PPO2('MlpPolicy', env, verbose=0, nminibatches=1, n_steps=128,tensorboard_log=tensorboard_folder)
-model.learn(total_timesteps=500000, tb_log_name='PPO2')
+model.learn(total_timesteps=1000000, tb_log_name='PPO2')
 model.save(model_folder + "PPO2")
