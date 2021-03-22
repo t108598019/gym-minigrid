@@ -8,10 +8,10 @@ trigger:
 
 pool: Default
 jobs:
-- job: 'DoorKey16x16'
+- job: 'FourRooms'
   strategy:
     parallel: 5
   timeoutInMinutes: 0 # how long to run the job before automatically cancelling
   steps:
-  - script: SB_PATH=/home/selab1421/Desktop/code/stable-baselines ./scripts/run_docker_gpu.sh python run_door_key_16x16.py
+  - script: SB_PATH=/home/selab1421/Desktop/code/stable-baselines ./scripts/run_docker_gpu.sh python run_four_rooms.py
     displayName: 'Training'
