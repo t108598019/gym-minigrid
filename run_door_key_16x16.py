@@ -6,7 +6,7 @@ from gym_minigrid.wrappers import FlatObsWrapper
 from stable_baselines import PPO2
 from stable_baselines.common.vec_env import  DummyVecEnv
 
-tensorboard_folder = './tensorboard/MiniGrid-DoorKey-16x16-v0/'
+tensorboard_folder = '/root/code/stable_baselines/tensorboard/MiniGrid-DoorKey-16x16-v0/'
 model_folder = './models/MiniGrid-DoorKey-16x16-v0/'
 if not os.path.isdir(tensorboard_folder):
     os.makedirs(tensorboard_folder)
