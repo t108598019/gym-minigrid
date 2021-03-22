@@ -1,0 +1,17 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- azure-pipelines
+
+pool: Default
+jobs:
+- job: 'DoorKey16x16'
+  strategy:
+    parallel: 2
+  timeoutInMinutes: 0 # how long to run the job before automatically cancelling
+  steps:
+  - script: SB_PATH=/home/selab1421/Desktop/code/azure/myagent/_work/stable-baselines ./scripts/run_docker_gpu.sh python run_door_key_16x16.py
+    displayName: 'Training'
